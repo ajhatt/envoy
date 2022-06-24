@@ -12,8 +12,8 @@ COPY cmd ./cmd
 RUN go build -o /envoy cmd/main.go
 
 # Environment variables
-env ENVOY_HOST="192.168.40.11"
-env INFLUXDB="http://192.168.10.10:9086"
+ENV ENVOY_HOST="192.168.40.11"
+ENV INFLUXDB="http://192.168.10.10:9086"
 
 # Run it
 CMD ["/envoy"]
